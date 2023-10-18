@@ -1,0 +1,30 @@
+<nb-card style="margin-top: 3%" *ngIf="showInfo">
+    <nb-card-header>
+        <h3>الأسم : {{name}}</h3>
+      </nb-card-header>
+    <nb-card-body>
+      <h5>رقم القيد : {{regId}}</h5>
+       <h5>رقم الموبيل : {{mobile}}</h5>
+      <h5>الرصيد : {{cash}}</h5>
+      <nb-card style="margin-top:3%">
+        <nb-card-header>
+          اضافة رصيد
+        </nb-card-header>
+        <nb-card-body>
+          <form [formGroup]="form">
+            <p>ادخل المبلغ : </p>
+            <input type="number" nbInput  style="margin-left: 5px" formControlName="fees" >
+            <button nbButton (click)="addCash()" [disabled]="!form.valid">اضافة</button><br><br>
+            <button nbButton printSectionId="print-section" ngxPrint [disabled]="!Print">طباعة فاتورة</button>
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </nb-card-body>
+  </nb-card>
+  
+  <div id="print-section" style="display: none">
+      <h3>الأسم : {{name}}</h3>
+      <p>رقم الموبيل : {{mobile}}</p>
+      <p>قيمة الشحن : {{payment}}</p>
+      <p>رقم القيد : {{regId}}</p>
+    </div>

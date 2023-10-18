@@ -1,0 +1,55 @@
+
+.rowTilte{
+    margin-top:14%;
+    color: white;
+    margin-right:15%;
+}
+.titles{
+    border-radius: 20px;
+    padding:30px;
+    background-image:linear-gradient(to bottom right,#2196F3 , #3F51B5);
+}
+
+h5{
+    color: white
+}
+.h5Count{
+    color: black
+}
+p{
+  color: #3F51B5;
+  font-size:35px;
+  margin-top:18%;
+  margin-bottom:11%;
+}
+
+button{
+    background-image:linear-gradient(to bottom right,#2196F3 , #3F51B5);
+    border-radius:15px !important
+}
+div .plusBtn{
+    font-size:50px;
+    padding: 23px 25px !important;
+    margin-right: 3.5%;
+}
+div .minBtn {
+    font-size:50px;
+    padding: 18px 29px 28px 29px!important
+}
+span{
+    padding: 0 30px;
+    font-size:30px
+}
+.btnPrint {
+    position: absolute;
+    bottom:7%;
+    left:6%;
+}
+.btnPrint button{
+    padding:65px 75px !important;
+    font-size: 60px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    color: #3F51B5 !important;
+    background: white !important
+}

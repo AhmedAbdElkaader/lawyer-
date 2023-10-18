@@ -1,0 +1,57 @@
+<nb-card>
+  <nb-card-header>
+    التقارير :
+  </nb-card-header>
+  <nb-card-body>
+    <div class="row" style="margin-bottom: 5%">
+      <div class="col">
+        <nb-select placeholder="اختر المحافظة" [(selected)]="selectedItem">
+          <nb-option (click)="getAllCitys(item.id)" value="{{i}}" *ngFor="let item of govList ; let i = index">{{item.name}}</nb-option>
+        </nb-select>
+      </div>
+      <div class="col">
+          <nb-select placeholder="اختر المدينة" [(selected)]="selectedItemCity">
+              <nb-option (click)="getAllPos(item.id)" value="{{i}}" *ngFor="let item of cityList ; let i = index">{{item.name}}</nb-option>
+            </nb-select>
+      </div>
+      <div class="col">
+        <nb-select placeholder="اختر الماكينة" [(selected)]="selectedItemCity">
+            <nb-option (click)="getItemOfPOS(item.id)" value="{{i}}" *ngFor="let item of posList ; let i = index">{{item.name}}</nb-option>
+          </nb-select>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="number"> تاريخ البداية :</label>
+            <input class="form-control" nbInput [nbDatepicker]="formpicker" formControlName="currentStartDate" 
+              shape="semi-round" fieldSize="giant">
+            <nb-datepicker #formpicker format="dd/MM/yyyy"></nb-datepicker>
+          </div>
+          <div class="form-group">
+            <label>تاريخ النهاية :</label>
+            <input class="form-control" nbInput [nbDatepicker]="former"  formControlName ="currentEndDate" shape="semi-round"
+              fieldSize="giant">
+            <nb-datepicker #former format="dd/MM/yyyy"></nb-datepicker>
+          </div>
+          <input type="radio" name="report" formControlName="report" value="dete" style="margin-bottom:10px; margin-left: 10px">تفاصيل<br>
+          <input type="radio" name="report" formControlName="report" value="total" style="margin-bottom:10px; margin-left: 10px" >الاجمالي<br>  
+        </form>
+        <button nbButton  (click)="getReportAsAll()">عرض</button>
+          </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+<nb-card style="text-align: center" *ngIf="summery">
+  <nb-card-body>
+    <h1>الاجمالي : {{totalCash}}</h1>
+  </nb-card-body>
+</nb-card>
+
+<nb-card *ngIf="detels">
+  <nb-card-body>
+      <ng2-smart-table [settings]="settings" [source]="arrOfData"></ng2-smart-table>
+  </nb-card-body>
+</nb-card>

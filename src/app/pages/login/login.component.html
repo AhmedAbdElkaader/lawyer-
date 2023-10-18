@@ -1,0 +1,18 @@
+<nb-card>
+  <nb-card-header>
+    تسجيل الدخول 
+  </nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="form">
+      <div style="text-align: right">
+        <label>ادخل رقم القيد :</label>
+        <input nbInput type="text" formControlName="number"  fullWidth fieldSize="giant"><br><br>
+      </div>
+      <div style="text-align: right">
+        <label>رقم المرور : </label>
+        <input nbInput type="password" formControlName="passwrod"  fullWidth fieldSize="giant"><br><br>
+      </div>
+    </form>
+    <button nbButton (click)="onEnter()" [disabled]="!form.valid">دخول</button>
+  </nb-card-body>
+</nb-card>

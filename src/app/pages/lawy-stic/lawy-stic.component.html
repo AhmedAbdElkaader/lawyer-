@@ -1,0 +1,179 @@
+<!-- <nb-card >
+  <nb-card-body>
+    <h5 style="float: right; margin-left: 20px">الأسم : {{name}}</h5>
+    <h5>الرصيد : {{cash}}</h5>
+    <p style="float: right; margin-left: 20px">رقم القيد : {{regId}}</p>
+    <p>رقم الموبيل : {{mobile}}</p>
+  </nb-card-body>
+</nb-card>
+
+
+<div class="row" style="margin: 20px 0">
+    <div class="col-xl">
+        <nb-card>
+          <nb-card-header>
+            <h5 style="text-align: center">5</h5>
+            <h6 style="text-align: center">جنيه</h6>
+          </nb-card-header>
+          <nb-card-body>
+            <div style="text-align: center">
+              <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countPlus(5)">+</button>
+              <h5 style="padding:0 20px 0 20px ; display: inline ; font-size: 30px">{{counter5}}</h5>
+              <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countMin(5)">-</button>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+  <div class="col-xl">
+    <nb-card>
+      <nb-card-header>
+        <h5 style="text-align: center">10</h5>
+        <h6 style="text-align: center">جنيه</h6>
+      </nb-card-header>
+      <nb-card-body>
+        <div style="text-align: center">
+          <button nbButton style="padding:30px 40px ; font-size: 30px"(click)="countPlus(10)">+</button>
+          <h5 style="padding:0 20px 0 20px ; display: inline ; font-size: 30px">{{counter10}}</h5>
+          <button nbButton style="padding:30px 40px ; font-size: 30px"(click)="countMin(10)">-</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-xl">
+      <nb-card>
+        <nb-card-header>
+          <h5 style="text-align: center">20</h5>
+          <h6 style="text-align: center">جنيه</h6>
+        </nb-card-header>
+        <nb-card-body>
+          <div style="text-align: center">
+            <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countPlus(20)">+</button>
+            <h5 style="padding:0 20px 0 20px ; display: inline ; font-size: 30px">{{counter20}}</h5>
+            <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countMin(20)">-</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 20px">
+    <div class="col-xl">
+        <nb-card>
+          <nb-card-header>
+            <h5 style="text-align: center">50</h5>
+            <h6 style="text-align: center">جنيه</h6>
+          </nb-card-header>
+          <nb-card-body>
+            <div style="text-align: center">
+              <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countPlus(50)">+</button>
+              <h5 style="padding:0 20px 0 20px ; display: inline ; font-size: 30px">{{counter50}}</h5>
+              <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countMin(50)">-</button>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+  <div class="col-xl">
+    <nb-card>
+      <nb-card-header>
+        <h5 style="text-align: center">100</h5>
+        <h6 style="text-align: center">جنيه</h6>
+      </nb-card-header>
+      <nb-card-body>
+        <div style="text-align: center">
+          <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countPlus(100)">+</button>
+          <h5 style="padding:0 20px 0 20px ; display: inline ; font-size: 30px">{{counter100}}</h5>
+          <button nbButton style="padding:30px 40px ; font-size: 30px" (click)="countMin(100)">-</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+ 
+</div>
+
+
+<div style="text-align: center ">
+  <button class="btnPrint" nbButton (click)="print(dialog)" 
+  style="background: black; color: white ; font-size:40px ; padding: 20px 20px"
+   size="giant">طباعة</button>
+</div> -->
+
+<div class="row rowTilte">
+  <div class="col-xl-7 col-offset-5 titles">
+    <h5 style="float: right;">الأسم / {{name}}</h5>
+    <h5 style="text-align: left; margin-left: 21%">الرصيد / {{cash}}</h5>
+    <h5 style="float: right; margin-left: 20px ; font-family:gess;">رقم القيد / {{regId}}</h5>
+    <h5 style="text-align: left ;font-family:gess;">رقم الموبيل / {{mobile}}</h5>
+  </div>
+</div>
+<div class="row" style="margin-right:13%">
+  <div class="col-xl-8 col-offset-4">
+    <div class="row">
+      <div class="col-xl">
+        <p style="margin-right: 13px;">خمسة جنيهات</p>
+        <button class="plusBtn" (click)="countPlus(5)" nbButton>+</button>
+        <span>{{counter5}}</span>
+        <button class="minBtn" (click)="countMin(5)" nbButton>-</button>
+      </div>
+      <div class="col-xl">
+        <p style="margin-right: 22px">عشرة جنيهات</p>
+        <button class="plusBtn" (click)="countPlus(10)"nbButton>+</button>
+        <span>{{counter10}}</span>
+        <button class="minBtn" (click)="countMin(10)" nbButton>-</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" style="margin-right:13%">
+  <div class="col-xl-8 col-offset-4 ">
+    <div class="row">
+      <div class="col-xl">
+        <p style="margin-right:24px;">عشرون جنيها</p>
+        <button class="plusBtn" (click)="countPlus(20)" nbButton>+</button>
+        <span>{{counter20}}</span>
+        <button class="minBtn" (click)="countMin(20)" nbButton>-</button>
+      </div>
+      <div class="col-xl">
+        <p style="margin-right:20px;">خمسون جنيها</p>
+        <button class="plusBtn" (click)="countPlus(50)" nbButton>+</button>
+        <span>{{counter50}}</span>
+        <button class="minBtn" (click)="countMin(50)" nbButton>-</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-right:13%">
+  <p style="margin-top:5%; margin-bottom:4% ; margin-right:55px">مائة جنيها</p>
+  <button class="plusBtn" style="margin-right:2%" (click)="countPlus(100)" nbButton>+</button>
+  <span>{{counter100}}</span>
+  <button class="minBtn" (click)="countMin(100)" nbButton>-</button>
+</div>
+<div class="btnPrint">
+  <button (click)="print(dialog)" nbButton>طباعة</button>
+</div>
+
+
+<ng-template #dialog let-data let-ref="dialogRef">
+  <nb-card style="width: 300px">
+    <nb-card-header>
+      <h4> الاجمالى : {{counter5*5 + counter10*10 + counter20*20 + counter50*50 + counter100*100}} جنيها </h4>
+    </nb-card-header>
+    <nb-card-body >
+      <h5 class="h5Count" *ngIf="counter5 != 0">{{counter5}} دمغه في 5 = {{counter5*5}}</h5>
+      <h5 class="h5Count"*ngIf="counter10 != 0">{{counter10}} دمغه في 10 = {{counter10*10}}</h5>
+      <h5 class="h5Count"*ngIf="counter20 != 0">{{counter20}} دمغه في 20 = {{counter20*20}}</h5>
+      <h5 class="h5Count"*ngIf="counter50 != 0">{{counter50}} دمغه في 50 = {{counter50*50}}</h5>
+      <h5 class="h5Count"*ngIf="counter100 != 0">{{counter100}} دمغه في 100 = {{counter100*100}}</h5>
+
+    </nb-card-body>
+    <nb-card-footer>
+      <button nbButton (click)="ref.close()" (click)="sendfees()" style="margin-left:20px">تاكيد</button>
+    </nb-card-footer>
+  </nb-card>
+</ng-template>
+
+<ng-template #cashingOut let-data let-ref="dialogRef">
+  <nb-card style="width:600px ; text-align: center">
+    <nb-card-body>
+      <h1>لا يوجد رصيد كافى </h1>
+    </nb-card-body>
+  </nb-card>
+</ng-template>
